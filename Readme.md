@@ -1,0 +1,1 @@
+El proyecto apunta a un MarketPlace de venta Online de vinos. Apunto a hacer la migracion de mi MarketPlace de wordPress a nuevas Tecnologías. 

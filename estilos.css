@@ -1,0 +1,94 @@
+body{
+    margin: 0 auto;
+    background-color: rgb(181, 181, 181);
+    color: aliceblue;
+}
+nav{
+    display: flex;
+    text-decoration: none;
+    background-color: rgb(95, 95, 156);
+    color: aliceblue;
+    font-size: 24px;
+}
+.divfondo {
+    background-image: url('./img/mapa.png');
+    height: 200px;
+    background-size: cover;
+  }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section{
+    padding: 20px;
+    text-align: center;   
+}
+
+section form{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}  
+
+section form input{
+    height: 20px;
+    border-radius: 10px;
+    margin: 5px;
+}
+section img {
+    border-radius: 20px;
+    width: 10vw;
+    height: 15vh;
+}
+.productos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productos .card{
+    border: 5px solid rgb(0, 0, 0);
+    width: 18rem;
+    height: 100%;
+    margin-top: 10px;
+    box-shadow: 10px 15px 10px rgb(86, 86, 86);
+    border-radius: 20px;
+}
+.productos .card-body {
+    height: 100%;
+}
+.productos .card-body >p {
+    margin: 0 auto;
+ }
+.productos .card-body > h2 {
+    margin: 2px;
+
+}
+.productos > div > a{
+    background-color: rgb(0, 255, 76);
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 10px 12px 12px black ;
+
+}
+
+form textarea {
+    margin: 10px;
+    border-radius: 10px;
+}
+
+footer ul {	
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly
+}
+footer ul li {
+    text-decoration: none;
+}
