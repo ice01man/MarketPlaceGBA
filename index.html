@@ -1,103 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <title>CLASE 3 </title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Tonneau Market Place</title>
+  </head>
+  <body>
     <header>
-        <div class="divfondo"></div>
-       <!--  <nav>
-            <ul><a href="">Inicio</a> </ul>
-            <ul><a href="">Productos</a> </ul>
-            <ul><a href="">Mercado</a> </ul>
-            <ul><a href="">Contacto</a> </ul>
-        </nav> -->
+      <div class="divfondo">
+        <a href=""> <img src="./img/contact.png" alt="contacto" /> Contacto</a>
+        <a href=""> <img src="./img/user.png" alt="usuario" /> Mi cuenta</a>
+        <a href=""> <img src="./img/market.png" alt="carrito" />Mi carrito</a>
+      </div>
     </header>
+    <nav>
+      <ul> <a href="">Inicio</a> </ul>
+      <ul> <a href="">Productos</a>  </ul>
+      <ul> <a href="">Wine Club</a>  </ul>
+      <ul> <a href="">Regalos Corpotativos</a>  </ul>
+      <ul> <a href="">Eventos</a>   </ul>
+      <ul> <a href="">Promociones</a>   </ul>
+      <ul> <a href="">Contacto</a>  </ul>
+    </nav>
     <main>
-        <section class="productos">
-            <h2> Productos</h2>
-              <div class="card" >
-                  <img src="./img/GM Torrontes.png" alt="GM Torrontes">
-                <div class="card-body">
-                  <h2>Titulo 1</h2>
-                <p>Lorem1, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dignissimos, quibusdam vel nostrum minima asperiores fugiat cumque vitae dolorem, officiis magnam mollitia qui aut aliquid, reprehenderit odio est saepe. Corrupti!</p>
+      <section class="mercado">
+        <!--    <h2>Mercado</h2>
+               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eos laudantium facilis, mollitia iure eligendi qui quia quidem cumque fugiat ab quaerat sapiente reprehenderit nemo, fugit omnis autem, nam magnam.</p>
+               <img src="./img/Imagen-Animada.jpg" alt="simpsons" width="200px" height="250px" >
+               <img src="./img/mapa.png" alt="simpsons" width="200px" height="250px" >
+               <img src="./img/palta.png" alt="simpsons" width="200px" height="250px" >
+               <img src="./img/unicornio.jpg" alt="simpsons" width="200px" height="250px" >
+         -->
+      </section>
+      <section class="productos">
+        <h2>Productos</h2>
+        <hr />
+        <div class="cards-container">
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/GM Torrontes.png" alt="" />
             </div>
-                <a href="#">Comprar</a>
+            <div class="card-body">
+              <h2>GM Torrontes  <p>⟫</p></h2> 
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
             </div>
-            <div  class="card" >
-                <img src="./img/SeisMiles Veralma.png" alt="">
-                <div class="card-body">
-                <h2>Titulo 2</h2>
-                <p>Lorem2, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dignissimos, quibusdam vel nostrum minima asperiores fugiat cumque vitae dolorem, officiis magnam mollitia qui aut aliquid, reprehenderit odio est saepe. Corrupti!</p>
-                <a href="#">Comprar</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/Tierra prometida MA.jpg" alt="">
-                <div class="card-body">
-                <h2>Titulo 3</h2>
-                <p>Lorem3, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dignissimos, quibusdam vel nostrum minima asperiores fugiat cumque vitae dolorem, officiis magnam mollitia qui aut aliquid, reprehenderit odio est saepe. Corrupti!</p>
-                <a href="#">Comprar</a>
-                </div>
-            </div>
-            <div class="card">
-                <img src="./img/Veralma Entretantos.png" alt="">
-                <div class="card-body">
-                <h2>Titulo 4</h2>
-                <p>Lorem4, ipsum dolor sit amet consectetur adipisicing elit. Consequatur dignissimos, quibusdam vel nostrum minima asperiores fugiat cumque vitae dolorem, officiis magnam mollitia qui aut aliquid, reprehenderit odio est saepe. Corrupti!</p>
-                <a href="#">Comprar</a>
-                </div>
-            </div>
-        </section>
+            <a href="#">Comprar</a>
+          </div>
          
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/SeisMiles Veralma.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h2>SeisMiles Veralma  <p>⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+         
+          <div class="cards">
+            <div class="card-mark">
+              <img
+                src="./img/productos/THENTIO-VALLE-ENCUENTRO-MALBEC-2019.jpeg"
+                alt=""
+              />
+            </div>
+            <div class="card-body">
+              <h2>THENTIO VALLE ENCUENTRO MALBEC  <p>⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
 
-        <section class="mercado">
-            <h2>Mercado</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet eos laudantium facilis, mollitia iure eligendi qui quia quidem cumque fugiat ab quaerat sapiente reprehenderit nemo, fugit omnis autem, nam magnam.</p>
-            <img src="./img/Imagen-Animada.jpg" alt="simpsons" width="200px" height="250px" >
-            <img src="./img/mapa.png" alt="simpsons" width="200px" height="250px" >
-            <img src="./img/palta.png" alt="simpsons" width="200px" height="250px" >
-            <img src="./img/unicornio.jpg" alt="simpsons" width="200px" height="250px" >
-     
-          
-        </section>
-        <section class="formulario">
-            <h2>Contacto</h2>
-          
-           <form action="">
-                <label for="nombre">Nombre
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                </label>
-                <label for="apellido">Apellido
-                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
-                </label>
-                <label for="correo">Correo
-                    <input type="email" name="correo" id="correo" placeholder="Correo electrónico">
-                </label>
-                <label for="ciudades"> Provincia
-                    <input list="ciudades" name="ciudades" placeholder="Ingrese una ciudad">
-                    <datalist id="ciudades">
-                        <option value="Buenos Aires">
-                        <option value="Córdoba">
-                        <option value="Rosario">
-                        <option value="Mendoza">
-                    </datalist>
-                </label>
-                <textarea name="textarea" id="textarea" cols="30"></textarea>
-                <button type="submit" value="enviar">Enviar</button>
-            </form>
-        </section>
+         
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/Veralma Entretantos.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h2>Veralma Entretantos  <p>⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/Veralma Entretantos.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h2>Titulo 5 <p> ⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/Veralma Entretantos.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h2>Titulo 6 <p> ⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="cards">
+            <div class="card-mark">
+            </div>
+            <img src="./img/productos/Veralma Entretantos.png" alt="" />
+            <div class="card-body">
+              <h2>Titulo 7 <p> ⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+          <div class="cards">
+            <div class="card-mark">
+              <img src="./img/productos/Veralma Entretantos.png" alt="" />
+            </div>
+            <div class="card-body">
+              <h2>Titulo 8 <p> ⟫</p></h2>
+              <p class="texto-oculto">
+                <b>CEPA: xxxxxxx</b><br>
+                <b>PRECIO: $$$$$</b><br>
+                <b>Informacion:</b><br>
+                Lorem2, ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur dignissimos, quibusdam vel nostrum minima asperiores
+                fugiat cumque vitae dolorem, officiis magnam mollitia qui aut
+                aliquid, reprehenderit odio est saepe. Corrupti!
+              </p>
+            </div>
+            <a href="#">Comprar</a>
+          </div>
+
+        </div>
+      </section>
+
+      <section>
+        <div class="divrigth"></div>
+      </section>
     </main>
+
+    <section class="formulario">
+      <h2>Contacto</h2>
+
+      <form action="">
+        <label for="nombre">Nombre</label>
+          <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
+        <label for="apellido">Apellido</label>
+          <input type="text" name="apellido" id="apellido" placeholder="Apellido"/>
+        <label for="correo">Correo</label>
+          <input type="email" name="correo" id="correo"placeholder="Correo electrónico"/>
+        <label for="ciudades">Provincia  </label>
+          <input list="ciudades" name="ciudades" placeholder="Ingrese una ciudad" />
+          <datalist id="ciudades">
+            <option value="Buenos Aires"></option>
+            <option value="Córdoba"></option>
+            <option value="Rosario"></option>
+            <option value="Mendoza"></option>
+          </datalist>
+        <textarea name="textarea" id="textarea" cols="30"></textarea>
+        <button type="submit" value="enviar">Enviar</button>
+      </form>
+    </section>
     <footer>
-        <ul>
-            <li>Contacto</li>
-            <li>Whatsapp</li>
-            <li>Linkedin</li>
-        </ul>
+      <ul>
+        <li><img src="./img/icons/contact_email.png" alt=""></li>
+        <li><img src="./img/icons/instagram.png" alt=""></li>
+        <li><img src="./img/icons/whatsapp.png" alt=""></li>
+        <li><img src="./img/icons/x_logo_twitte.png" alt=""></li>
+      </ul>
     </footer>
-    
-</body>
+  </body>
 </html>

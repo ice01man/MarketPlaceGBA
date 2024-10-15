@@ -1,94 +1,177 @@
+
+
+@font-face {
+    font-family: 'EduAustralia';
+    src: url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+  }
+
 body{
     margin: 0 auto;
-    background-color: rgb(181, 181, 181);
+    background-color: rgb(0, 0, 0);
     color: aliceblue;
 }
 nav{
-    display: flex;
-    text-decoration: none;
-    background-color: rgb(95, 95, 156);
+    display: flex;  
+    flex-direction: row;
     color: aliceblue;
-    font-size: 24px;
+    font-size: 1rem;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+}
+nav > ul a {
+    text-decoration: none;
+    color: azure;
+    margin-right: 10px;
+ 
 }
 .divfondo {
-    background-image: url('./img/mapa.png');
-    height: 200px;
-    background-size: cover;
+    background-image: url('./img/Tonneua.png');
+    background-color: black;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end
+    /*background-size: cover; */
   }
+.divfondo > a {
+    text-decoration: none;
+    margin: 5px;
+    font-size: 20px;
+    color: aliceblue;
+    font-family: 'EduAustralia', Times, serif;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+.divfondo >a >img {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    filter: invert(1);
+}
 
 main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 2fr 800px 2fr;
 }
 
 section{
     padding: 20px;
-    text-align: center;   
+    text-align: center;    
+    background-color: rgb(0, 0, 0);
+    /*border: 1px solid blue; */
 }
 
-section form{
+/** Section de Productos */
+.productos h2{
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: end;
-}  
+    justify-content: center;
+    align-items: center;
+}
+.texto-oculto {
+    display: none; /* Ocultamos el texto inicialmente */
+}
 
-section form input{
-    height: 20px;
-    border-radius: 10px;
+.card-body:hover .texto-oculto {
+    display: block;
+    text-align: start;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    
+}
+.cards {
+   /* perspective: 100px; /* Crea un efecto 3D  */
+    width: 200px;
     margin: 5px;
-}
-section img {
-    border-radius: 20px;
-    width: 10vw;
-    height: 15vh;
-}
-.productos{
+    align-items: center;
+    transition: transform 1.0s; /* Agrega una transición suave al rotar */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap
+  }
+
+.productos img {
+    border-radius: 20px;
+    width: 10rem;
+    height: 15rem;
+} 
+.productos img:hover {
+    width: 11rem;
+    height: 16rem;
+    box-shadow: 2px 2px 100px white;
+}
+  
+.cards a {
+    background-color: rgb(111, 165, 31);
+    color: black;
+    border-radius: 10px;
+    display: flex;
+    width: 80%;
+    height: 30px;
     align-items: center;
     justify-content: center;
-}
-
-.productos .card{
-    border: 5px solid rgb(0, 0, 0);
-    width: 18rem;
-    height: 100%;
-    margin-top: 10px;
-    box-shadow: 10px 15px 10px rgb(86, 86, 86);
-    border-radius: 20px;
-}
-.productos .card-body {
-    height: 100%;
-}
-.productos .card-body >p {
-    margin: 0 auto;
- }
-.productos .card-body > h2 {
-    margin: 2px;
-
-}
-.productos > div > a{
-    background-color: rgb(0, 255, 76);
-    width: 200px;
-    height: 50px;
-    padding: 10px;
+    line-height: 30px;
     text-decoration: none;
+  } 
+.cards a:hover {
+    box-shadow: 5px 5px 50px  rgb(222, 241, 194);
+  }
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+.formulario form input{
     border-radius: 10px;
-    box-shadow: 10px 12px 12px black ;
+    height: 2rem;
+    width: 400px;
+  }
+.formulario form button{
+    background-color: rgb(111, 165, 31);
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+  }
+.formulario form button:hover {
+    box-shadow: 3px 3px 50px  rgb(140, 167, 101);
+  }
+  
 
-}
-
-form textarea {
+  /* CSS del footer */
+.formulario form textarea {
     margin: 10px;
     border-radius: 10px;
 }
 
 footer ul {	
     width: 100%;
+    padding: 0;
     display: inline-flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 footer ul li {
     text-decoration: none;
+    list-style: none;
+    line-height: 50px;
+    
+}
+footer ul img{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid white;
+    background-color: aliceblue;
+    border-radius: 7px;
+    margin: 5px;
+    
 }
