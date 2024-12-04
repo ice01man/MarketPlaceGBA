@@ -1,0 +1,23 @@
+.imain {
+  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(85,85,85,1) 0%, rgba(0,0,0,1) 87%);
+    /*padding: 20px;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
+.slide {
+  width: 97%; /* Ajusta el ancho según la cantidad de imágenes */
+  height: 500px;
+  border-radius: 10px;
+  transition: width 0.3s ease, transform 0.3s ease;
+  /*transition: transform 0.3s ease-in-out; */
+    z-index: 1;
+  }
+
+.slide:hover {
+    opacity: 1;
+    width: 105%; transform: scale(1.1);
+    z-index: 2; 
+}
+
