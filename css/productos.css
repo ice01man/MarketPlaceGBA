@@ -47,29 +47,45 @@ section img{
     margin: 10px;
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
   }
 section {
     border: 1px dashed yellowgreen;
     display: inline-block;
     padding: 15px;
-    background-color: #30829b;
+    background-color: #1d2e33;
     margin: 10px;
     border-radius: 10px;
     text-align: center;
+    color:aliceblue;
+    font-family: "Delius", cursive;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 20px;
 }
 section h3{
     align-self: center;
     font-size: 30px;
     font-style: italic;
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: aliceblue;
 }
 section img{
     width: 75px;
     height: 120px;
 }
+section button{
+  margin: 13px;
+  height: 45px;
+  width: 40%;
+  background-color: green;
+  border-radius: 10px;
+  align-self: center;
+  font-size: 20px;
+  color: aliceblue;
+}
+
   
   @media (max-width: 768px) {
     .cards-container section {
