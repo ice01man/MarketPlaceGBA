@@ -68,6 +68,11 @@ section button{
   background-color: rgb(242, 186, 82);
   padding: 1px;
 }
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
   
   @media (max-width: 768px) {
     .cards-container section {

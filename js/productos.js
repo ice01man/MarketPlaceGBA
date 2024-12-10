@@ -27,14 +27,16 @@ function Listaproductos(){
                                             <img src="${imagenURL[x]}"  alt="${tituloURL[x]}" </img>
                                             <p> ${textoURL[x]} </p>
                                         </div>
-
-                                        <hr /> 
+                                        <div class="precio">
+                                        Precios: $ <p> ${(Math.random()*1000).toFixed(2) }</p>
+                                        </div>
+                                
                                         <div class="contador" >
                                             <button id="res${idDrink[x]}" onclick="btnRes(${idDrink[x]})">➖ </button>
                                             <span id="cant${idDrink[x]}">0</span>
                                             <button id="sum${idDrink[x]}" onclick="btnSum(${idDrink[x]})">➕ </button>
                                         </div>
-                                        <button type="button" id="${idDrink[x]}" onclick="btnComprar(${idDrink[x]})">Comprar</button>
+                                        <button type="button" id="${idDrink[x]}" onclick="btnAgregar(${idDrink[x]})" disabled>Agregar</button>
                                     </section>`;
 
                 template = document.createElement('template');
@@ -46,12 +48,25 @@ function Listaproductos(){
         vcard.appendChild(fragment);
         });
     }
-function btnComprar(id){
-    const cantidadSpan = document.getElementById('cant'+id);
-    console.log(cantidadSpan);
-    const cantidadActual = parseInt(cantidadSpan.textContent);
-    const nuevaCantidad = cantidadActual + 1;
-    cantidadSpan.textContent = nuevaCantidad;
+function btnAgregar(id){
+    prod = document.getElementById(id);
+    Fprod = prod.parentElement
+    
+    vprod =  Fprod.children[0].textContent
+    vimg = Fprod.children[1].children[0].src
+    vprecio = Fprod.children[2].children[0].textContent
+    vcant = Fprod.children[3].children[1].textContent
+    const producto = {
+        nombre: vprod,
+        imagen: vimg,
+        cantidad: vcant,
+        precioUnitario: vprecio,
+        precioTotal: vcant * vprecio
+      };
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push(producto);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 
 }
 
@@ -59,18 +74,19 @@ function btnSum(id){
 
     cantidadSpan = document.getElementById('cant'+id);
     cantidadActual = parseInt(cantidadSpan.textContent);
+    document.getElementById(id).disabled = false;
     nuevaCantidad = cantidadActual + 1;
     cantidadSpan.textContent = nuevaCantidad;
 }
 
 function btnRes(id){
     cantidadSpan = document.getElementById('cant'+id);
-    console.log('Canti Menos '+ cantidadSpan.textContent);
     cantidadActual = parseInt(cantidadSpan.textContent);
-    if (cantidadActual <= 0){
-        alert("La Cantidad No puede ser Negativa")
+    if (cantidadActual <= 1){
+        document.getElementById(id).disabled = true;
         nuevaCantidad = 0;
         cantidadSpan.textContent = nuevaCantidad;
+       /* alert("La Cantidad No puede ser Negativa")*/
     }else{
         nuevaCantidad = cantidadActual - 1;
         cantidadSpan.textContent = nuevaCantidad;
