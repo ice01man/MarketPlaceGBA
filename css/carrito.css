@@ -1,0 +1,50 @@
+
+.imain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table{
+    margin-top: 2rem;
+    width: 100rem;
+    box-shadow: 3rem 3rem 5rem  gray;
+    margin-bottom: 5rem;
+}
+.table tr{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.table td img{
+    width: 4rem;
+    height: 4rem;
+}
+.table td button{
+    width: 5rem;
+    height: 3rem;
+    background-color: rgb(3, 146, 3) ;
+    border-radius: 1rem;
+    padding: 2px;
+    color: aliceblue;
+}
+.table td a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-body > input{
+    width: 90%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px;
+    text-align: center;
+}
+  

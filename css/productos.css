@@ -1,7 +1,9 @@
+
+
 .container{
   display: flex;
   justify-content: space-around;
-
+  margin-top: 25px;
 }
 .cards-container {
     display: flex;
@@ -14,42 +16,49 @@
 .cards-container section {
     width: 300px;
     margin: 10px;
-    padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     box-sizing: border-box;
   }
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 15px;
-    background-color: #1d2e33;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
-    color:aliceblue;
-    font-family: "Delius";
-    font-weight: 450;
-    font-style: normal;
-    font-size: 20px;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(180deg,  #212717 0%,#13361c 87%);
+  /* background-color: #13361c; */
+  border-radius: 10px;
+  text-align: center;
+  color:aliceblue;
+  font-family: "Delius";
+  font-weight: 450;
+  font-style: normal;
+  font-size: 20px;
 }
 section h3{
-    font-size: 30px;
-    font-style: italic;
-    text-transform: uppercase;
-    color: aliceblue;
+  font-size: 30px;
+  background-color: #212717;
+  font-style: italic;
+  text-transform: uppercase;
+  color: aliceblue;
 }
 section img{
-    width: 100px;
-    height: 200px;
+  width: 100px;
+  height: 200px;
+  border-radius: 15px;
+}
+.imagen > p {
+    padding: 10px;
+    overflow-y: scroll;
+    height: 150px; /* Ajusta la altura según tus necesidades */
+  
 }
 
 
 section button{
-  margin: 13px;
-  height: 45px;
+  margin: 8px;
   width: 40%;
+  height: 100%;
   background-color: green;
   border-radius: 10px;
   align-self: center; 
@@ -65,12 +74,12 @@ section button{
 .contador button{
   height: 35px;
   width: 45px;
-  background-color: rgb(242, 186, 82);
+  background-color: #cc9a48;
   padding: 1px;
 }
 
 button[disabled] {
-  background-color: #ccc;
+  background-color: #dfdfdf;
   cursor: not-allowed;
 }
   

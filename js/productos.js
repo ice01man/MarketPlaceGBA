@@ -4,6 +4,7 @@ console.log("Buscar Productos");
 
 function Listaproductos(){
     vcard = document.querySelector(".cards-container");
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     URL = ('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=a')
     const idDrink = []; tituloURL = []; imagenURL = []; textoURL = []; categoriaURL = [];
@@ -20,12 +21,13 @@ function Listaproductos(){
                 }
             
             const fragment = document.createDocumentFragment();
+
             for(x = 0; x < data.drinks.length; x++){
                 let vcardHTML =   `<section>
                                         <h3>${tituloURL[x]}</h3>
                                         <div class="imagen">
                                             <img src="${imagenURL[x]}"  alt="${tituloURL[x]}" </img>
-                                            <p> ${textoURL[x]} </p>
+                                            <p class="sectexto"> ${textoURL[x]} </p>
                                         </div>
                                         <div class="precio">
                                         Precios: $ <p> ${(Math.random()*1000).toFixed(2) }</p>
@@ -43,20 +45,25 @@ function Listaproductos(){
                 template.innerHTML = vcardHTML;
                 fragment.appendChild(template.content);
                 }
-                            
-        // Insertar el fragmento en el contenedor
-        vcard.appendChild(fragment);
+                               
+            // Insertar el fragmento en el contenedor
+            vcard.appendChild(fragment);
         });
-    }
+       
+}
+
+
+    
 function btnAgregar(id){
     prod = document.getElementById(id);
-    Fprod = prod.parentElement
-    
+   
+    Fprod = prod.parentElement 
     vprod =  Fprod.children[0].textContent
     vimg = Fprod.children[1].children[0].src
     vprecio = Fprod.children[2].children[0].textContent
-    vcant = Fprod.children[3].children[1].textContent
+    vcant = parseInt(Fprod.children[3].children[1].textContent)
     const producto = {
+        id: id,
         nombre: vprod,
         imagen: vimg,
         cantidad: vcant,
@@ -64,11 +71,21 @@ function btnAgregar(id){
         precioTotal: vcant * vprecio
       };
 
+        
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.push(producto);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    const indice = carrito.findIndex(item => item.id === producto.id);
+    if (indice !== -1) {
+        carrito[indice].cantidad = producto.cantidad;
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }else{
+        carrito.push(producto);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
 
 }
+
+
 
 function btnSum(id){
 
